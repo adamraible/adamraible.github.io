@@ -1,194 +1,342 @@
-/* CSS FILE FOR WEBSITE
-------------------
-Color codes used:
-#607980 ---- purple ish
-*/
-
+/* Refined blue-grey color scheme for Adam Raible Portfolio */
 :root {
-    --nav-background: darkolivegreen;
-    --nav-text: darkorange;
-    --header-about: darkorange ;
-    --header-projects: darkolivegreen;
-    --header-jobExperience: darkorange;
-    --header-contact: darkolivegreen;
+  --nav-background: #1f2c3a;
+  --nav-text: #cbd5e1;
+  --section-background: #1e293b;
+  --text-color: #e2e8f0;
+  --highlight: #60a5fa;
+  --card-bg: #334155;
 }
 
 body {
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    background-color: #1F2833;
-    color: beige;
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--section-background);
+  color: var(--text-color);
+  scroll-behavior: smooth;
 }
 
-.navBox {
-    font-size: 35px;
-    font-family: sans-serif;
-    height: 80px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    margin-top: 30px;
-    background-color: var(--nav-background);
-    opacity: 90%;
+header.navBox {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background-color: var(--nav-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.navBox nav {
+  display: flex;
+  gap: 3rem;
 }
 
 .navBox a {
-    text-decoration: none;
-    text-shadow: 2px 2px maroon;
-    color: var(--nav-text);
-    line-height: 60px; 
-    transition: background-color 0.3s; 
-    margin-right: 10vh;
+  text-decoration: none;
+  color: var(--nav-text);
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .navBox a:hover {
-    background-color: #123456; 
-    color: white; 
+  color: white;
+  background-color: #475569;
+  padding: 5px 10px;
+  border-radius: 4px;
 }
 
 .hero {
-    position: relative;
-    height:  100vh;
-    background-image: url('C:\Users\adamr\OneDrive\Documents\HTML\burg.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  background-color: #1e293b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
 }
 
-.name {
-    font-family: sans-serif;
-    font-size: 50px;
-    text-align: left;
-    margin-left: 5vh;
+.hero img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--highlight);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--highlight);
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 4rem;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: smoothTyping 5s steps(50, end) forwards;
+}
+
+@keyframes smoothTyping {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 section {
-    max-width: 100%; 
-    overflow: hidden; 
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box; 
-    background-color: var(--header-background);
+  padding: 80px 20px 60px;
+  text-align: center;
+  min-height: 100vh;
+  background-color: var(--section-background);
+  scroll-margin-top: 40px;
 }
 
-#about {
-    background-color: var(--header-about);
+h2 {
+  font-size: 2.5rem;
+  color: var(--highlight);
+  margin-bottom: 40px;
 }
 
 .about-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.about-image img {
-    max-width: 30%;
-    height: auto; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
 }
 
 .about-text {
-    flex: 1;
+  flex: 1 1 400px;
+  max-width: 600px;
 }
 
-#projects {
-    background-color: var(--header-projects);
+.about-image img {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000;
 }
 
-.project-subsection {
-    width: 40%; 
-    margin: 10px; 
-    height: 40vh;
-   
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 0 20px;
 }
 
-#projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 10px;
-    color: darkorange;
+/* Tall and thin large projects */
+.large-project {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  height: 520px;
+  overflow: hidden;
 }
 
-.project-image img {
-    max-width: 40%;
+.large-project img {
+  height: 280px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+
+.large-project h3 {
+  color: var(--highlight);
+  font-size: 1.2rem;
+  margin: 10px 0 8px;
+}
+
+.large-project p {
+  font-size: 0.9rem;
+  overflow-y: auto;
+}
+
+/* Smaller row below */
+.small-project {
+  background-color: var(--card-bg);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 220px;
+}
+
+.small-project h3 {
+  color: var(--highlight);
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.small-project p {
+  margin: 0;
+}
+
+/* Stack on mobile */
+@media screen and (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .large-project,
+  .small-project {
     height: auto;
-}
-
-#jobExperience {
-    background-color: var(--header-jobExperience);
-}
-
-.job-subsection {
-    padding: 10px;
-    color: var(--header-jobExperience);
-    width: 80%; 
-    margin: 10px; 
-    height: 50vh; 
-
-}
-
-#contact {
-    background-color: darkolivegreen;
-    color: darkorange;
-}
-.job-image img {
-    max-width: 80%;
-    height: 60%;
-}
-.job-images-container {
-    display: flex;
-    gap: 20px; 
-  
-}
-
-section + section {
-    margin-top: 20px;
+  }
 }
 
 
-.typing-text {
-    opacity: 85%;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+.project-item img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.project-item h3 {
+  color: var(--highlight);
+  margin-bottom: 10px;
+}
+
+.project-item p {
+  font-size: 0.95rem;
+}
+
+#experience .experience-text {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.job-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.job-gallery img {
+  width: 30%;
+  min-width: 200px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+#contact a {
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Extra project and job sections */
+.extra-section {
+  padding: 60px 20px;
+  background-color: var(--section-background);
+  text-align: center;
+}
+
+.extra-section h3 {
+  color: var(--highlight);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.extra-section p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+   .hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-image {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('burg.jpg') no-repeat center center/cover;
+  filter: blur(10px) brightness(40%);
+  animation: fadeBlur 3s ease-out forwards;
+  z-index: 1;
+}
+
+@keyframes fadeBlur {
+  from {
+    filter: blur(25px) brightness(30%);
+  }
+  to {
+    filter: blur(2px) brightness(40%);
+  }
+}
+
+    .typing-text-overlay {
+      position: relative;
+      z-index: 2;
+      font-size: 3rem;
+      font-weight: bold;
+      color: #537d90; /* blue */
+      text-shadow: 2px 2px 2px #010101; /* soft gray shadow */
+      animation: smoothTyping 3s steps(40, end) forwards;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+    @keyframes smoothTyping {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    .hero p1{
+    position: relative;
+    height: 10vh;
+    width: 90%;
     overflow: hidden;
-    white-space: nowrap;
-    background-color: darkolivegreen;
-    font-size: 44px;
-    color: beige;
-    animation: typing 8s steps(40, end), blink-caret 0.5s step-end infinite;
-    z-index: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .image-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 35px;
+  margin-bottom: 60px;
 }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 70%;
-    }
-}
-
-@keyframes blink-caret {
-    from,
-    to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: white;
-    }
+.image-gallery img {
+  width: 210px;
+  height: auto;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
