@@ -20,21 +20,32 @@
 
   <section class="hero">
   <div class="hero-image"></div>
-  <div class="typing-text-overlay">
-    <p1>Welcome to my portfolio! Scroll or use the menu above.</p1>
-  </div>
+  <div class="typing-text-overlay fade-slide">
+  <p>Hello! Scroll or select an option above to learn more</p>
+</div>
 </section>
 
   <section id="about">
     <h2>About Me</h2>
     <div class="about-content">
       <div class="about-text">
-        <p>Hi! I’m Adam Raible, a senior Mechanical Engineering student at the University of Pittsburgh with a minor in Computer Engineering. I have enjoyed bridging hands-on mechanical design with computer engineering work. Outside the classroom, I’m passionate about running, hiking, hockey, and spendiing time with friends and family. I am finishing up my coursework and will be graduating in August 2025, and am searching for new work experiences for the fall and beyond. This website showcases some of my class and real-world experiences, and will be updated with more soon!</p>
+        <p>Hi! I’m Adam Raible, a senior Mechanical Engineering student at the University of Pittsburgh with a minor in Computer Engineering. I have enjoyed bridging hands-on mechanical design with computer engineering work. Outside the classroom, I’m passionate about running, hiking, hockey, and spendiing time with friends and family. </p>
       </div>
       <div class="about-image">
         <img src="me.jpg" alt="Adam Raible">
       </div>
+
     </div>
+    <div class="about-content">
+         <div class="about-image">
+        <img src="aboutme.jpeg" alt="Adam Raible">
+      </div>
+      <div class="about-text">
+        <p>I graduated from Seneca Valley High School in 2021 and began studying Electrical Engineering at the University of Pittsburgh before transitioning to Mechanical Engineering with a minor in Computer Engineering. I chose the minor to strengthen my understanding of embedded systems, programming, and hardware-software integration—skills that complement my mechanical background. I’m currently finishing my coursework and will be graduating in August 2025. I'm actively seeking new work opportunities for the fall and beyond. This website highlights some of my academic and real-world experiences and will be updated with more soon!
+
+</p>
+      </div>
+     
   </section>
 
   
@@ -72,38 +83,58 @@
   </section>
 
 
- <section id="projects">
+<section id="projects">
   <h2>Projects</h2>
-  <div class="project-grid">
-    <!-- Large projects -->
-    <div class="project-item large-project">
-      <img src="fishTwo.png" alt="project">
+
+    <!-- Featured large project -->
+  <div class="featured-project dual-image-layout">
+    <img src="cadFish.png" alt="Prototype of electromagnetic fish" class="side-image">
+    <div class="featured-text centered-text">
       <h3>Electromagnetically Actuated System to Demonstrate Fish-Like Motion</h3>
       <p>
-        Worked in a group to develop a spine-like system demonstrating underwater propulsion using varying-current electromagnets. <br>
-        - Redesigned 3D models iteratively to meet motion specs <br>
-        - Designed & printed PCBs for sensor testing (optical and magnetic) <br>
-        - Troubleshot hardware: motor drivers, sensors, and microcontrollers
+        Worked in a team to develop a spine-like system to replicate underwater propulsion using electromagnetic actuation. <br>
+        - Project aimed at demonstrating and controlling this magentically actuated motion
+        - Goal was to show the motion, and how it could be applied to underwater propulsion for quiter, less detectable movement
+        – Iteratively redesigned 3D components to meet dynamic movement goals<br>
+        – Designed and tested PCBs with optical and magnetic sensors<br>
+        – Debugged microcontroller, motor driver, and sensor integration<br>
+        - Presented our final model and suggestions for the future to our sponsor and various engineering professionals <br>
       </p>
     </div>
+    <img src="poster.png" alt="CAD model of fish system" class="side-image">
+  </div>
 
-    <div class="project-item large-project">
-      <img src="bridge.jpeg" alt="Bridge project">
-      <h3>K-Truss Bridge Simulation</h3>
+  <!-- Medium project grid -->
+  <div class="project-grid-row">
+    <div class="medium-project">
+      <img src="bridge.jpeg" alt="K-Truss Bridge project">
+      <h4>K-Truss Bridge Simulation</h4>
+      <p>Designed and simulated a K-truss bridge in SolidWorks with emphasis on load distribution and failure modes.</p>
+    </div>
+    <div class="medium-project">
+      <img src="bread.jpeg" alt="Rock Paper Scissors logic gate project">
+      <h4>Rock-Paper-Scissors Logic Game</h4>
       <p>
-        Designed and simulated a balsa wood K-truss bridge in SolidWorks. Focused on load distribution, force calculation, and failure simulations using Solidworks software. 
+        Designed and wired a digital rock-paper-scissors game using only logic gates and flip-flops on a breadboard. Required mapping input states to LED output logic, and alot of troubleshooting. LEDs indicated win or tie, and pushbutton combinations were used to represent rock, paper, and scissors.
       </p>
     </div>
-
-    <div class="project-item large-project">
-      <img src="rov.jpeg" alt="Rover project">
-      <h3>Rover Obstacle Course</h3>
-      <p>
-        Designed and built a rover to navigate an obstacle course and interact with adjacent systems. Involved CAD, team coordination, and physical prototyping. CAD model involved an animation of the rover completing the course
-      </p>
+    <div class="medium-project">
+      <img src="rov.jpeg" alt="Rover Obstacle Course">
+      <h4>Rover Obstacle Course</h4>
+      <p>Built a rover to navigate a course, requiring CAD modeling, prototyping, system integration, and team coordination.</p>
     </div>
+  </div>
 
-    
+  <!-- Skills/awards/tools -->
+  <div class="extra-projects-row">
+    <div class="extra-box">
+      <h4>Skillset Highlight</h4>
+      <p>Proficient in SolidWorks, Autodesk Fusion 360, MATLAB, C/C++, Java, Python, Javascript, HTML.</p>
+    </div>
+    <div class="extra-box">
+      <h4>Tool Experience</h4>
+      <p>Experienced with 3D printing, Laser Cutting, Sensor Integration, Mechanical Assembly, Sketching, Basic Hand Tools and Machinery</p>
+    </div>
   </div>
 </section>
 
@@ -116,3 +147,4 @@
 
 </body>
 </html>
+
